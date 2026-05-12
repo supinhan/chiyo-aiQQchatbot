@@ -1,0 +1,39 @@
+
+services:
+
+  chiyo-logic:
+
+    build: .
+
+    restart: always
+
+    network_mode: "host"
+
+    volumes:
+
+      - .:/app
+
+    environment:
+
+      - TZ=Asia/Shanghai
+
+
+
+  napcat:
+
+    image: mlikiery/napcat-docker:latest
+
+    restart: always
+
+    network_mode: "host"
+
+    volumes:
+
+      - ./napcat_config:/app/napcat/config
+
+    environment:
+
+      - ACCOUNT=692684768
+
+      - TZ=Asia/Shanghai
+

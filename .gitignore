@@ -1,0 +1,10 @@
+# Large binaries
+napcat/*.deb
+QQ/qq
+QQ/resources/app/wrapper.node
+QQ/resources/app/major.node
+
+# General ignores
+*.log
+node_modules/
+.DS_Store

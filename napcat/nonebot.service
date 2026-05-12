@@ -1,0 +1,12 @@
+[Unit]
+Description=NoneBot Service for Chiyo Bot
+After=network.target napcat.service
+
+[Service]
+User=root
+Restart=on-failure
+WorkingDirectory=/opt/chiyo_bot
+ExecStart=/opt/chiyo_bot/venv/bin/nb run
+
+[Install]
+WantedBy=multi-user.target

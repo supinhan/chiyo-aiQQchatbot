@@ -1,0 +1,13 @@
+[Unit]
+Description=Napcat QQ Server
+Documentation=https://napneko.github.io/guide
+After=network.target
+
+[Service]
+User=root
+Restart=on-failure
+WorkingDirectory=/root
+ExecStart=/usr/bin/xvfb-run -a qq --no-sandbox
+
+[Install]
+WantedBy=multi-user.target
